@@ -63,13 +63,16 @@ namespace ChessConsole.Board
             {
                 return false;
             }
-
             return true;
         }
 
-
-
-
+        public  void validatePosition(Position pos)
+        {
+            if (!positionValid(pos))
+            {
+                throw new BoardGameException("Invalid Position");
+            }
+        }
 
     }
 }
