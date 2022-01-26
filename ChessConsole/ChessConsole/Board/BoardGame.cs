@@ -38,7 +38,7 @@ namespace ChessConsole.Board
         {
             if (existPiece(pos)) 
             {
-                throw new BoardGameExcepition("Already exist a piece in this position");
+                throw new BoardGameException("Already exist a piece in this position");
             }
             pieces[pos.line, pos.column] = p;
             p.position = pos;
