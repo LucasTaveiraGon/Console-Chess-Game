@@ -22,7 +22,7 @@ namespace ChessConsole.Chess
             Piece p = board.piece(pos);
             return p == null || p.collor != collor;
         }
-
+        /*
         public override bool[,] possibleMoves()
         {
             bool[,] mat = new bool[board.lines, board.columns];
@@ -126,7 +126,7 @@ namespace ChessConsole.Chess
             }
 
             return mat;
-        }
+        }*/
 
     }
 }

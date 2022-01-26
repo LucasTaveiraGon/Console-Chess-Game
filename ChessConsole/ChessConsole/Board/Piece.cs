@@ -4,25 +4,19 @@ using System.Text;
 
 namespace ChessConsole.Board
 {
-    abstract class Piece
+    class Piece
     {
         public Position position { get; set; }
         public Collor collor { get; protected set; }
         public int qntMove { get; protected set; }
         public BoardGame board { get; protected set; }
 
-        public Piece(Position position, BoardGame board, Collor collor) 
+        public Piece(BoardGame board, Collor collor) 
         { 
-            this.position = position;
+            this.position = null;
             this.board = board;
             this.collor = collor;
             this.qntMove = 0;   
-        }
-
-        protected Piece(BoardGame board, Collor collor)
-        {
-            this.board = board;
-            this.collor = collor;
         }
 
         public void moveIncrement()
@@ -55,6 +49,6 @@ namespace ChessConsole.Board
         {
             return possibleMoves()[pos.line, pos.column];
         }
-        public abstract bool[,] possibleMoves();
+        public  bool[,] possibleMoves() { return possibleMoves(); }
     }
 }
