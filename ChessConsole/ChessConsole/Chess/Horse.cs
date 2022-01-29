@@ -16,7 +16,7 @@ namespace ChessConsole.Chess
             return "H";
         }
 
-        /*
+        
         private bool canMove(Position pos)
         {
             Piece p = board.piece(pos);
@@ -71,6 +71,6 @@ namespace ChessConsole.Chess
             }
 
             return mat;
-        } */
+        } 
     }
 }

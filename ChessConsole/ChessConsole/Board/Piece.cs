@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ChessConsole.Board
 {
-    class Piece
+    abstract class Piece
     {
         public Position position { get; set; }
         public Collor collor { get; protected set; }
@@ -49,6 +49,7 @@ namespace ChessConsole.Board
         {
             return possibleMoves()[pos.line, pos.column];
         }
-        public  bool[,] possibleMoves() { return possibleMoves(); }
+        public abstract bool[,] possibleMoves(); 
+
     }
 }
